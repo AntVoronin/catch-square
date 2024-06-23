@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    margin: 20px auto;
+    background-color: #ccc;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    /* overflow: hidden; */
+}
+.squere {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: auto;
+}
+.active {
+    border: 2px solid red;
+}
+.hide {
+    display: none;
+}
