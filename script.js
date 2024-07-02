@@ -31,7 +31,7 @@ window.onload = function() {
 
                     if( hideNum === 9 ) {
                         let timeGame = ( (new Date() - start)/1000 ).toFixed(1) ;
-                        score.innerHTML += `Ваше время: ${ timeGame }сек <br>`;
+                        score.querySelector('.statistic').innerHTML += `Ваше время: ${ timeGame }сек <br>`;
                         clearInterval(timer);
 
                         if( confirm("Сыграем ещё?") )  startGame(time);
