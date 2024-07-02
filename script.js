@@ -62,6 +62,3 @@ window.onload = function() {
     //     return Math.floor(Math.random() * max);
     // }
 }
-    
-
-
