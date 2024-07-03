@@ -79,31 +79,3 @@
 .show {
     display: block;
 }
-@media screen and (max-width: 660px) {
-    .wrapper {
-        width: 420px;
-    }
-    .score {
-      width: 360px;
-      min-height: 150px;
-      font-size: 10pt;
-    }
-    .rule {
-        min-height: 70px;
-    }
-    .score h4 {
-        margin-top: 5px;
-    }
-    .line {
-        margin-bottom: 10px;
-    }
-  }
-@media screen and (max-width: 390px) {
-    .outer {
-        margin: 0px;
-    }
-    .wrapper {
-        width: 390px;
-        border: none;
-    }
-}
