@@ -1,9 +1,12 @@
 
 /* =========Smaller than 660px===========  */
 @media screen and (max-width: 660px) {
-    /* .wrapper {
-        width: 420px;
-    } */
+    .wrapper {
+        width: 390px;
+    }
+    .outer {
+        margin: 0px;
+    }
     .score {
       width: 360px;
       min-height: 150px;
