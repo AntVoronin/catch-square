@@ -25,19 +25,7 @@
   }
 
   /* @media (orientation: landscape)  */
-  /* @media (aspect-ratio: 844 / 390 ) {
-    .gameField {
-        width: 315px;
-        height: 350px;}
-    .squere {
-        width: 85px;
-        height: 85px;
-        }
-    .score {
-        min-height: 350px;
-    }
-  } */
-  @media (aspect-ratio: 2340 / 1080 ) {
+  @media (orientation: landscape) and (aspect-ratio: 844 / 390 ) {
     .gameField {
         width: 315px;
         height: 350px;}
@@ -52,7 +40,22 @@
         color: white;
     }
   }
-  @media (aspect-ratio: 19.5 / 9 ) {
+  @media (orientation: landscape) and (aspect-ratio: 2340 / 1080 ) {
+    .gameField {
+        width: 315px;
+        height: 350px;}
+    .squere {
+        width: 85px;
+        height: 85px;
+        }
+    .score {
+        min-height: 350px;
+    }
+    .score h4 {
+        color: white;
+    }
+  }
+  @media (orientation: landscape) and (aspect-ratio: 19.5 / 9 ) {
     .gameField {
         width: 315px;
         height: 350px;}
