@@ -17,6 +17,7 @@
     }
     .score h4 {
         margin-top: 5px;
+        color: red;
     }
     .line {
         margin-bottom: 10px;
@@ -31,5 +32,8 @@
     .wrapper {
         width: 390px;
         border: none;
+    }
+    .score h4 {
+        color: green;
     }
 }
