@@ -4,9 +4,6 @@
     .wrapper {
         width: 390px;
     }
-    .outer {
-        margin: 0px;
-    }
     .score {
       width: 360px;
       min-height: 150px;
@@ -17,15 +14,14 @@
     }
     .score h4 {
         margin-top: 5px;
-        color: red;
+        /* color: red; */
     }
     .line {
         margin-bottom: 10px;
     }
   }
 
-  /* @media (orientation: landscape)  */
-  @media (orientation: landscape) and (aspect-ratio: 844 / 390 ) {
+  @media screen and (aspect-ratio: 844 / 390 ) {
     .gameField {
         width: 315px;
         height: 350px;}
@@ -40,22 +36,9 @@
         color: white;
     }
   }
-  @media (orientation: landscape) and (aspect-ratio: 2340 / 1080 ) {
-    .gameField {
-        width: 315px;
-        height: 350px;}
-    .squere {
-        width: 85px;
-        height: 85px;
-        }
-    .score {
-        min-height: 350px;
-    }
-    .score h4 {
-        color: white;
-    }
-  }
-  @media (orientation: landscape) and (aspect-ratio: 19.5 / 9 ) {
+
+  /* @media (orientation: landscape) and (aspect-ratio: 2340 / 1080 )  */
+  @media screen and (aspect-ratio: 19.5 / 9 ) {
     .gameField {
         width: 315px;
         height: 350px;}
@@ -73,9 +56,6 @@
 
 /* =========Smaller than 390px===========  */
 @media screen and (max-width: 390px) {
-    /* .outer {
-        margin: 0px;
-    } */
     .wrapper {
         width: 390px;
         border: none;
