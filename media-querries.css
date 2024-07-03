@@ -25,7 +25,7 @@
   }
 
   /* @media (orientation: landscape)  */
-  @media (aspect-ratio: 844 / 390 ) {
+  /* @media (aspect-ratio: 844 / 390 ) {
     .gameField {
         width: 315px;
         height: 350px;}
@@ -36,11 +36,22 @@
     .score {
         min-height: 350px;
     }
-    /* .score h4 {
+  } */
+  @media (aspect-ratio: 2340 / 1080 ) {
+    .gameField {
+        width: 315px;
+        height: 350px;}
+    .squere {
+        width: 85px;
+        height: 85px;
+        }
+    .score {
+        min-height: 350px;
+    }
+    .score h4 {
         color: white;
-    } */
+    }
   }
-  
 
 /* =========Smaller than 390px===========  */
 @media screen and (max-width: 390px) {
