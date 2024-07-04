@@ -1,13 +1,14 @@
 window.onload = function() {
 
     const gField = document.querySelector('.gameField'),
-    score      = document.querySelector('.score');
+          score  = document.querySelector('.score');
 
     let start;
 
-    //создаём квадраты динамически:
+    //создаём квадраты:
     for(let i=1; i<=9; i++) {
-        gField.innerHTML += `<div class="squere"></div>`;
+        //gField.innerHTML += `<div class="squere"></div>`;
+        gField.insertAdjacentHTML('beforeend', '<div class="squere"></div>');
         //или так:
         // const divSquere = document.createElement("div");
         //       divSquere.classList.add('squere');
@@ -15,50 +16,32 @@ window.onload = function() {
     }
 
     screen.orientation.onchange = function() {
-        console.log('Ориентация: ' + screen.orientation.type);
+
         let head = document.querySelector('head');
+        let rel = `<link rel="stylesheet" href="style_orientation.css"></link>`;
 
-        if( screen.orientation.type == 'landscape-primary' ) {
-            let rel = `<link rel="stylesheet" href="style_orientation.css"></link>`;
+        //адаптив для поворота экрана смартфона:
+        // if( screen.orientation.type == 'landscape-primary' ) {
+        //     head.insertAdjacentHTML("beforeend", rel );
+        //     } else { 
+        //         head.querySelector('link[href="style_orientation.css"]').remove();
+        //     }
+
+        //так нагляднее:
+        switch (screen.orientation.type) {
+            case "landscape-primary":
             head.insertAdjacentHTML("beforeend", rel );
-            } else { 
-                head.querySelector('link[href="style_orientation.css"]').remove();
-            }
-
-        //document.querySelector('head').append(`<link rel="stylesheet" href="style_orientation.css"></link>`);
-        // document.querySelector('head').innerHTML += `
-        //                                 <style>
-        //                                 .gameField {
-        //                                     width: 315px;
-        //                                     height: 350px;}
-        //                                 .squere {
-        //                                     width: 85px;
-        //                                     height: 85px;
-        //                                     }
-        //                                 .score {
-        //                                     min-height: 350px;
-        //                                 }
-        //                                 .score h4 {
-        //                                     color: white;
-        //                                 }
-        //                                 </style> `
+            break;
+            // case "landscape-secondary":
+            // break;
+            // case "portrait-secondary":
+            case "portrait-primary":
+            head.querySelector('link[href="style_orientation.css"]').remove();
+            break;
+            default:
+            console.log("The orientation API isn't supported in this browser :(");
+        }
     };
-
-    //наверно можно подгружать м скрипты(медиа) под размер конкретный:
-    // switch (screen.orientation.type) {
-    //     case "landscape-primary":
-    //       console.log("That looks good.");
-    //       break;
-    //     case "landscape-secondary":
-    //       console.log("Mmmh… the screen is upside down!");
-    //       break;
-    //     case "portrait-secondary":
-    //     case "portrait-primary":
-    //       console.log("Mmmh… you should rotate your device to landscape");
-    //       break;
-    //     default:
-    //       console.log("The orientation API isn't supported in this browser :(");
-    //   }
 
     startGame(1000);
     
