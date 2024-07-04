@@ -17,17 +17,13 @@ window.onload = function() {
     screen.orientation.onchange = function() {
         console.log('Ориентация: ' + screen.orientation.type);
         let head = document.querySelector('head');
-        
+
         if( screen.orientation.type == 'landscape-primary' ) {
             let rel = `<link rel="stylesheet" href="style_orientation.css"></link>`;
             head.insertAdjacentHTML("beforeend", rel );
             } else { 
                 head.querySelector('link[href="style_orientation.css"]').remove();
             }
-
-        //console.log(head.querySelector('link[href="style_orientation.css"]') );
-
-        // head.querySelector('link[href="style_orientation.css"]').remove();
 
         //document.querySelector('head').append(`<link rel="stylesheet" href="style_orientation.css"></link>`);
         // document.querySelector('head').innerHTML += `
@@ -93,10 +89,6 @@ window.onload = function() {
 
                         if( confirm("Сыграем ещё?") )  startGame(time);
                     }
-                    // let hideNum = document.querySelectorAll('.hide');
-                    // if( hideNum.length === 3 ) {
-                    // .....
-                    // }
                 }
             })
         } )
@@ -113,12 +105,5 @@ window.onload = function() {
     function getRand() {
         return Math.round(Math.random());
     }
-
-    // <p style="font-size: 120%; font-family: monospace; color: #cd66cc">Пример текста</p>
-    `<style type="text/css">
-        body {
-            color: red;
-            }
-    </style>`
 
 }

@@ -14,7 +14,6 @@
     }
     .score h4 {
         margin-top: 5px;
-        /* color: red; */
     }
     .line {
         margin-bottom: 10px;
@@ -32,9 +31,9 @@
     .score {
         min-height: 350px;
     }
-    .score h4 {
+    /* .score h4 {
         color: white;
-    }
+    } */
   }
 
   /* @media (orientation: landscape) and (aspect-ratio: 2340 / 1080 )  */
@@ -49,9 +48,9 @@
     .score {
         min-height: 350px;
     }
-    .score h4 {
+    /* .score h4 {
         color: white;
-    }
+    } */
   }
 
 /* =========Smaller than 390px===========  */
