@@ -1,17 +1,30 @@
 window.onload = function() {
 
-    //можно динамически задавать число квадратов, время и генерить квадраты скриптом через innerHTML например
-    //а вёрстка будет чистая ?
     const gField = document.querySelector('.gameField'),
-    squere     = document.querySelectorAll('.squere'),
-    score      = document.querySelector('.score'),
-    btnPlay    = document.querySelector('.play');
+    // squere     = document.querySelectorAll('.squere'),
+    score      = document.querySelector('.score');
 
     let start;
+
+    //создаём квадраты динамически:
+    for(let i=1; i<=9; i++) {
+        gField.innerHTML += `<div class="squere"></div>`;
+        //или так:
+        // const divSquere = document.createElement("div");
+        //       divSquere.classList.add('squere');
+        //       gField.appendChild(divSquere);
+    }
+
+    screen.addEventListener("orientationchange", function () {
+        console.log("The orientation of the screen is: " + screen.orientation);
+        score.querySelector('.statistic').innerHTML += `orientationchange`;
+    });
 
     startGame(1000);
     
     function startGame(time) {
+        
+        squere = document.querySelectorAll('.squere');
         //восстанавливавем квадратики при следующем запуске:
         squere.forEach( el=> {
             el.classList.remove('hide');
@@ -44,7 +57,6 @@ window.onload = function() {
             })
         } )
     }
-
     //btnPlay.addEventListener('click', function() { startGame(1000) } );
 
     function active() {
@@ -57,8 +69,12 @@ window.onload = function() {
     function getRand() {
         return Math.round(Math.random());
     }
-    // рандомн целое от 0 до max-1
-    // function getRandomInt(max) {
-    //     return Math.floor(Math.random() * max);
-    // }
+
+    // <p style="font-size: 120%; font-family: monospace; color: #cd66cc">Пример текста</p>
+    `<style type="text/css">
+        body {
+            color: red;
+            }
+    </style>`
+
 }
