@@ -70,27 +70,28 @@
     vertical-align: auto;
     /* transition: background-color 1s; */
 }
-.squere img {
+
+/* анимируется переход на bangShow и обратн к bangHide========================= */
+.bangHide {
     opacity: 0;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     position: relative;
-    left: 0px;
-    top:  0px;
-    transition: opacity 0.3s, width 0.3s, height 0.3s, left 0.3s, top 0.3s ;
+    left: -10px;
+    top:  -10px;
+    transition: opacity 0.1s, width 0.1s, height 0.1s, left 0.1s, top 0.1s ; 
 }
-/* .bang {
+.bangShow {
     opacity: 1;
     width:  150px;
     height: 150px;
-    position: relative;
     left: -25px;
     top:  -25px;
-    transition: opacity 0.7s, width 0.7s, height 0.7s, left 0.7s, top 0.7s ;
-} */
+    transition: opacity 0.3s, width 0.3s, height 0.3s, left 0.3s, top 0.3s ; 
+}
+/*===============================================================================*/
 .active {
     background-color: #eb874b;
-    /* transition: background-color 1s; */
 }
 .hide {
     /* display: none; */
